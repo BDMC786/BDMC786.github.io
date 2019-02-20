@@ -1,0 +1,42 @@
+html{
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    
+    margin-bottom: 60px;
+    background-color: lightgray;
+  }
+
+.panel-body{
+    background-color:white;    
+}
+
+h2{
+    color: teal;
+}
+
+h3{
+    color: teal;
+    text-align: center;
+}
+
+        
+        
+
+footer{
+    background-color: lightgray;
+    text-align: center;
+    padding: 15px;
+    height: 60px;
+    width: 100%;
+    border-top: 10px;
+    border-top-color: teal;
+    border-width: 10px;
+    border-top-style: solid;
+    position: absolute;
+    bottom: 0;
+}
+
+    
