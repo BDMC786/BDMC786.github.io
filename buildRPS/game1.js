@@ -20,12 +20,6 @@ submit.on("click", function() {
   var PlayerInput = inputElement.property("value");
 
 //Convert different inputs to "Word" form eg r = Rock
-
-  console.log(PlayerInput);
-
-  console.log("Test");
-
-
   if (PlayerInput == "r"){
     PlayerInput = "Rock";}
 
@@ -57,8 +51,6 @@ submit.on("click", function() {
     PlayerInput = "Scissors";}
 
 
-  console.log(PlayerInput);
-
 
   var choice = ["Rock", "Paper", "Scissors"];
   var win = "Congratulations! You win!";
@@ -71,8 +63,6 @@ submit.on("click", function() {
   console.log(computerChoice);
   //var stock = d3.select("#stockInput").node().value;
   d3.select("#example-form-input").node().value = "";
-
-
 
 
 
@@ -97,18 +87,6 @@ submit.on("click", function() {
 
 
   else {result = "I did not understand that! Please choose Rock, Paper, or Scissors."}
-  console.log(w);
-  console.log(l);
-  console.log(d);
-  console.log("counter above");
-
-
-
-
-
-
-
-
 
 
   // Set the span tag in the h1 element to the text
@@ -129,4 +107,3 @@ submit.on("click", function() {
 var reset = d3.select("#reset");
 
 //submit.on("click", function() {})
-
