@@ -10,6 +10,16 @@ var submit = d3.select("#submit");
 
 submit.on("click", function() {
 
+//practicing with case functions
+  var ra = "ScaTtEr"
+  //var correct = ra.toLowerCase();no longer needed
+  ra = ra.toLowerCase();
+  //console.log(correct);no longer needed
+  console.log(ra);
+  //console.log(ra.charAt(0));
+  console.log(ra.charAt(0).toUpperCase() + ra.slice(1));
+//end practice
+
   // Prevent the page from refreshing
   d3.event.preventDefault();
 
@@ -19,36 +29,46 @@ submit.on("click", function() {
   // Get the value property of the input element
   var PlayerInput = inputElement.property("value");
 
+  //convert input to lower case
+  PlayerInput = PlayerInput.toLowerCase();
+  //capitalize the first letter of input
+  PlayerInput = PlayerInput.charAt(0).toUpperCase() + PlayerInput.slice(1)
+  console.log(`output = ${PlayerInput}`);//test works
+
 //Convert different inputs to "Word" form eg r = Rock
-  if (PlayerInput == "r"){
+  //if (PlayerInput == "r"){
+    //PlayerInput = "Rock";}
+
+  //else if (PlayerInput == "rock"){
+    //PlayerInput = "Rock";}
+
+  //else if (PlayerInput == "R"){
+    //PlayerInput = "Rock";}
+
+//testing case manipulation with rock only- works
+  if (PlayerInput == "R"){
     PlayerInput = "Rock";}
 
-  else if (PlayerInput == "rock"){
-    PlayerInput = "Rock";}
-
-  else if (PlayerInput == "R"){
-    PlayerInput = "Rock";}
 
 
-
-  if (PlayerInput == "p"){
+  if (PlayerInput == "P"){
     PlayerInput = "Paper";}
 
-  else if (PlayerInput == "paper"){
-    PlayerInput = "Paper";}
+  //else if (PlayerInput == "paper"){
+    //PlayerInput = "Paper";}
 
-  else if (PlayerInput == "P"){
-    PlayerInput = "Paper";}
+  //else if (PlayerInput == "P"){
+    //PlayerInput = "Paper";}
 
 
-  if (PlayerInput == "s"){
+  if (PlayerInput == "S"){
     PlayerInput = "Scissors";}
 
-  else if (PlayerInput == "scissors"){
-    PlayerInput = "Scissors";}
+  //else if (PlayerInput == "scissors"){
+    //PlayerInput = "Scissors";}
 
-  else if (PlayerInput == "S"){
-    PlayerInput = "Scissors";}
+  //else if (PlayerInput == "S"){
+    //PlayerInput = "Scissors";}
 
 
 
@@ -61,6 +81,7 @@ submit.on("click", function() {
   console.log(choice);
   console.log("checking");
   console.log(computerChoice);
+  console.log(PlayerInput);
   //var stock = d3.select("#stockInput").node().value;
   d3.select("#example-form-input").node().value = "";
 
