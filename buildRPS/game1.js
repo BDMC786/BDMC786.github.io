@@ -35,40 +35,22 @@ submit.on("click", function() {
   PlayerInput = PlayerInput.charAt(0).toUpperCase() + PlayerInput.slice(1)
   console.log(`output = ${PlayerInput}`);//test works
 
-//Convert different inputs to "Word" form eg r = Rock
-  //if (PlayerInput == "r"){
-    //PlayerInput = "Rock";}
 
-  //else if (PlayerInput == "rock"){
-    //PlayerInput = "Rock";}
+//  if (PlayerInput == "R"){
+//    PlayerInput = "Rock";}
+//  if (PlayerInput == "P"){
+//    PlayerInput = "Paper";}
+//  if (PlayerInput == "S"){
+//    PlayerInput = "Scissors";}
 
-  //else if (PlayerInput == "R"){
-    //PlayerInput = "Rock";}
-
-//testing case manipulation with rock only- works
   if (PlayerInput == "R"){
-    PlayerInput = "Rock";}
-
-
-
-  if (PlayerInput == "P"){
+     PlayerInput = "Rock";}
+  else if (PlayerInput == "P"){
     PlayerInput = "Paper";}
-
-  //else if (PlayerInput == "paper"){
-    //PlayerInput = "Paper";}
-
-  //else if (PlayerInput == "P"){
-    //PlayerInput = "Paper";}
-
-
-  if (PlayerInput == "S"){
+  else if (PlayerInput == "S"){
     PlayerInput = "Scissors";}
 
-  //else if (PlayerInput == "scissors"){
-    //PlayerInput = "Scissors";}
 
-  //else if (PlayerInput == "S"){
-    //PlayerInput = "Scissors";}
 
 
 
