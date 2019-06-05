@@ -6,5 +6,5 @@ To improve:
 
   Allow for misspellings
   
-  D3 to append divs to show result (refreshing should eliminate divs so no undoing necessary)
+  D3 to append divs to show result (no spaces between submit and reset buttons until results rendered)
 
