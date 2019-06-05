@@ -1,1 +1,1 @@
-Test adding ReaDME
+This folder contains an HTML file and a JS file. The JS file uses D3 to add all elements of a table (<table>, <thead> etc.) and renders made up data to fill the table body cells. This is done as an exercise for me to practice D3 techniques. 
