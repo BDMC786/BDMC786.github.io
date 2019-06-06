@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Loan Calculator</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form>
+          <div class="form-group">
+            <h1>Loan Calculator<h1>
+              <div class="col-md-3">
+                <input class="form-control" id="example-form-input" name="example-form" type="text" placeholder="Enter Loan Amount ($100000)">
+                  
+                <div class="col-md-10">
+                  <input class="form-control" id="example-form-input" name="example-form" type="text" placeholder="Enter Interest Rate (7.00%)">
+                </div>
+                <div class="col-md-1">
+                <span id="interest_rate_addon" class="add-on">%</span>
+                </div>
+                <input class="form-control" id="example-form-input" name="example-form" type="text" placeholder="Enter Loan Duration in years">
+              </div>
+          </div><br><br><br><br><br><br><br>
+          <button id="submit" type="submit" class="btn btn-default">Calculate</button>
+        </form>
+          <div class="target">
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h2>
+        </h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <form>
+          <button id="reset" type="submit" class="btn btn-default">Clear</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</body>
+<script src="loan.js"></script>
+
+</html>
