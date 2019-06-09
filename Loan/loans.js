@@ -20,7 +20,10 @@ submit.on("click", function() {
   var balance = 0;
   var minterest = 0; //interest monthly
   
-
+//before the loop to calculate each month and append table row, append table header to target
+          
+          
+          
 
 //LOOP
   for (i = 0; i < time; i++){
