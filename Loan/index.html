@@ -20,20 +20,22 @@
           <div class="form-group">
             <h1>Loan Calculator<h1>
               <div class="col-md-3">
-                <input class="form-control" id="example-form-input" name="example-form" type="text" placeholder="Enter Loan Amount ($100000)">
+                <input class="form-control" id="loan" name="example-form" type="text" placeholder="Enter Loan Amount ($100000)">
                   
                 <div class="col-md-10">
-                  <input class="form-control" id="example-form-input" name="example-form" type="text" placeholder="Enter Interest Rate (7.00%)">
+                  <input class="form-control" id="rate" name="example-form" type="text" placeholder="Enter Interest Rate (7.00%)">
                 </div>
                 <div class="col-md-1">
                 <span id="interest_rate_addon" class="add-on">%</span>
                 </div>
-                <input class="form-control" id="example-form-input" name="example-form" type="text" placeholder="Enter Loan Duration in years">
+                <input class="form-control" id="time" name="example-form" type="text" placeholder="Enter Loan Duration in years">
               </div>
           </div><br><br><br><br><br><br><br>
           <button id="submit" type="submit" class="btn btn-default">Calculate</button>
         </form>
-          <div class="target">
+          <div id="Payment">
+          </div>
+          <div id="target">
           </div>
       </div>
     </div>
