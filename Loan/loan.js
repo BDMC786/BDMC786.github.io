@@ -108,14 +108,36 @@ submit.on("click", function(){
   //console.log(`months = ${months}`);
   //console.log(`${}`);
   //console.log("END VARIABLES");
+  console.log(headers[0]);
 
   //Add variables to array
-  dict = {};
+  var dict = {"Date": `${i}`,
+  "Interest": `${interest}`,
+  "Cumulative Interest": `${c_int}`,
+  "Principal": `${prin}`,
+  "Total Principal Paid": `${c_prin}`,
+  "Remaining Balance": `${bal}`
+};
+  data.push(dict);
+  //console.log(dict);
+  //data.push(dict);
   
   
 
   }
 //end of loop
+
+  console.log(data);
+  var tbody = d3.select("tbody");
+
+  data.forEach((month) => {
+    var row = tbody.append("tr");
+    Object.entries(month).forEach(([key, value]) => {
+      var cell = tbody.append("td");
+      cell.text(value);
+    });
+  });
+
 
 
 
