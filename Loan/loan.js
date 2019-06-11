@@ -1,30 +1,30 @@
 console.log("Start");
 
 var submit = d3.select("#submit");
-console.log(submit);
+//console.log(submit);
 
 submit.on("click", function(){
   d3.event.preventDefault();
-  console.log("Click");
+  //console.log("Click");
 
 //capture inputs
   var PV = d3.select("#loan");
-  console.log(PV.property("value"));
+  //console.log(PV.property("value"));
   loan = PV.property("value");
   var rate = d3.select("#rate");
-  console.log(rate.property("value"));
+  //console.log(rate.property("value"));
   r = rate.property("value");
   var time = d3.select("#time");
-  console.log(time.property("value"));
+  //console.log(time.property("value"));
   months = time.property("value");
 
 //calculate payment
   r = r/1200
-  console.log(r);
-  var P = (r*loan)/(1-(1+r)**((0-1) * months));
-  console.log(P);
+  //console.log(r);
+  var P = (r*loan)/(1-(1+r)**(-months));
+  //console.log(P);
   Pr = Math.round(P);
-  console.log(Pr);
+  //console.log(Pr);
 
 //Append Payment calculation
   d3.select("#Payment").text(`Your monthly payment is: $${Pr}`);
@@ -77,29 +77,42 @@ submit.on("click", function(){
   //establish loop
   console.log("LOOP");
   months = parseInt(months);
-  console.log(months);
+
   var i;
 
   for (i = 0; i < months; i++) {
   //calculate interest
   interest = r * bal;
   interest = Math.round(interest);
-  console.log(interest);
+  //console.log(interest);
   //interest cumulative
   c_int = c_int + interest;
-  console.log(c_int);
+  //console.log(c_int);
   //calculate prin
   prin = Pr - interest
-  console.log(`prin = ${prin}`);
+  //console.log(`prin = ${prin}`);
   //calculate cumulative principle
   c_prin = c_prin + prin
-  console.log("c_prin");
+  //console.log("c_prin");
   //calculate new balance
   bal = bal - prin;
-  console.log(`remaining balance = ${bal}`);
+  //console.log(`remaining balance = ${bal}`);
 
-  console.log("END");
-  console.log("Append Body");
+  //console.log("VARIABLES");
+  //console.log(`Date = ${i}`);//for now
+  //console.log(`Interest = ${interest}`);
+  //console.log(`cumulative interest = ${c_int}`);
+  //console.log(`Principal = ${prin}`);
+  //console.log(`Total Principal Paid = ${c_prin}`);
+  //console.log(`Remaining Balance = ${bal}`);
+  //console.log(`months = ${months}`);
+  //console.log(`${}`);
+  //console.log("END VARIABLES");
+
+  //Add variables to array
+  dict = {};
+  
+  
 
   }
 //end of loop
