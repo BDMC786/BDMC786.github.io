@@ -70,6 +70,7 @@ submit.on("click", function(){
   //define variables
   var interest = 0;
   var c_int = 0;
+  c_int = c_int.toFixed(2);
   var prin = 0;
   var c_prin = 0;
   var bal = loan;
@@ -83,19 +84,25 @@ submit.on("click", function(){
   for (i = 0; i < months; i++) {
   //calculate interest
   interest = r * bal;
-  interest = Math.round(interest);
+  interest = interest.toFixed(2);
   //console.log(interest);
   //interest cumulative
-  c_int = c_int + interest;
+  //parseFloat(c_int)
+  c_int = parseFloat(c_int) + parseFloat(interest);
+  c_int = c_int.toFixed(2);
   //console.log(c_int);
   //calculate prin
   prin = Pr - interest
+  prin = prin.toFixed(2);
   //console.log(`prin = ${prin}`);
   //calculate cumulative principle
-  c_prin = c_prin + prin
+  c_prin = parseFloat(c_prin) + parseFloat(prin);
+  c_prin = c_prin.toFixed(2);
+  //c_prin = c_prin.toFixed(2);
   //console.log("c_prin");
   //calculate new balance
   bal = bal - prin;
+  bal = bal.toFixed(2);
   //console.log(`remaining balance = ${bal}`);
 
   //console.log("VARIABLES");
