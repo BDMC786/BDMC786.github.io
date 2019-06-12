@@ -23,7 +23,7 @@ submit.on("click", function(){
   //console.log(r);
   var P = (r*loan)/(1-(1+r)**(-months));
   //console.log(P);
-  Pr = Math.round(P);
+  Pr = P.toFixed(2);
   //console.log(Pr);
 
 //Append Payment calculation
@@ -137,15 +137,6 @@ submit.on("click", function(){
       cell.text(value);
     });
   });
-
-
-
-
-
-
-
-
-
 
 
 
