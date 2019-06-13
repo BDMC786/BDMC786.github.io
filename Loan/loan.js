@@ -24,7 +24,9 @@ submit.on("click", function(){
   var P = (r*loan)/(1-(1+r)**(-months));
   //console.log(P);
   Pr = P.toFixed(2);
-  //console.log(Pr);
+  console.log(Pr);
+  console.log(P);
+  console.log("ABOVE");
 
 //Append Payment calculation
   d3.select("#Payment").text(`Your monthly payment is: $${Pr}`);
@@ -84,7 +86,7 @@ submit.on("click", function(){
   for (i = 0; i < months; i++) {
   //calculate interest
   interest = r * bal;
-  interest = interest.toFixed(2);
+  Rinterest = interest.toFixed(2);
   //console.log(interest);
   //interest cumulative
   //parseFloat(c_int)
@@ -92,8 +94,8 @@ submit.on("click", function(){
   c_int = c_int.toFixed(2);
   //console.log(c_int);
   //calculate prin
-  prin = Pr - interest
-  prin = prin.toFixed(2);
+  prin = P - interest
+  Rprin = prin.toFixed(2);
   //console.log(`prin = ${prin}`);
   //calculate cumulative principle
   c_prin = parseFloat(c_prin) + parseFloat(prin);
@@ -102,7 +104,7 @@ submit.on("click", function(){
   //console.log("c_prin");
   //calculate new balance
   bal = bal - prin;
-  bal = bal.toFixed(2);
+  Rbal = bal.toFixed(2);
   //console.log(`remaining balance = ${bal}`);
 
   //console.log("VARIABLES");
@@ -119,11 +121,11 @@ submit.on("click", function(){
 
   //Add variables to array
   var dict = {"Date": `${i}`,
-  "Interest": `${interest}`,
+  "Interest": `${Rinterest}`,
   "Cumulative Interest": `${c_int}`,
-  "Principal": `${prin}`,
+  "Principal": `${Rprin}`,
   "Total Principal Paid": `${c_prin}`,
-  "Remaining Balance": `${bal}`
+  "Remaining Balance": `${Rbal}`
 };
   data.push(dict);
   //console.log(dict);
