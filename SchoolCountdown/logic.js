@@ -26,7 +26,7 @@ var x = setInterval(function() {
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("Jessica").innerHTML = "EXPIRED";
+    document.getElementById("Jessica").innerHTML = "HAPPY SUMMER MY LOVE!!!";
   }
 }, 1000); //1000 = 1 second
 
