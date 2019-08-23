@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Play Ball!</title>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<select>
+  <option>Yankees</option>
+  <option value="saab">Red Sox</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select>
+<hr>
+<br><br>
+<form>
+<select>
+  <option>Yankees</option>
+  <option value="saab">Red Sox</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select>
+</form>
+
+<hr>
+<select placeholder="select your beverage">
+  <option value="" disabled selected>Select A Team</option>
+  <option value="hurr">Yankees</option>
+  <option>Rays</option>
+  <option value="saab">Red Sox</option>
+  <option value="opel">Blue Jays</option>
+  <option value="audi">Orioles</option>
+</select>
+
+<hr>
+
+<select>
+
+<option selected="selected"></option>
+
+<!--  <option value="hurr">Yankees</option> -->
+  <option>Yankees</option>
+  <option>Rays</option>
+  <option value="saab">Red Sox</option>
+  <option value="opel">Blue Jays</option>
+  <option value="audi">Orioles</option>
+</select>
+
+<hr>
+
+<div class="well">
+     <h5>Select Team:</h5>
+     <select id="selTeam" onchange="optionChanged(this.value)">
+         <option></option>
+         <option value="yankees">Yankees</option> <!–– Pattern for others, alphabetize later ––>
+         <option>Rays</option>
+         <option value="saab">Red Sox</option>
+         <option value="opel">Blue Jays</option>
+         <option value="audi">Orioles</option>
+     </select>
+</div>
+
+</body>
+
+</html>
