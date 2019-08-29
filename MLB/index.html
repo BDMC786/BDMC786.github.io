@@ -2,68 +2,83 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Play Ball!</title>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Play Ball!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
-<select>
-  <option>Yankees</option>
-  <option value="saab">Red Sox</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
-</select>
-<hr>
-<br><br>
-<form>
-<select>
-  <option>Yankees</option>
-  <option value="saab">Red Sox</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
-</select>
-</form>
+<!DOCTYPE html>
+<html lang="en">
 
-<hr>
-<select placeholder="select your beverage">
-  <option value="" disabled selected>Select A Team</option>
-  <option value="hurr">Yankees</option>
-  <option>Rays</option>
-  <option value="saab">Red Sox</option>
-  <option value="opel">Blue Jays</option>
-  <option value="audi">Orioles</option>
-</select>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MLB TEST</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
 
-<hr>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Select Team</h5>
+          <select id="selTeam" onchange="teamChanged(this.value)">
+            <option value="athletics">A's</option>
+            <option value="angels">Angels</option>
+            <option value="astros">Astros</option>
+            <option value="bluejays">Blue Jays</option>
+            <option value="braves">Braves</option>
+            <option value="brewers">Brewers</option>
+            <option value="cardinals">Cardinals</option>
+            <option value="cubs">Cubs</option>
+            <option value="dbacks">Dbacks</option>
+            <option value="dodgers">Dodgers</option>
+            <option value="giants">Giants</option>
+            <option value="indians">Indians</option>
+            <option value="mariners">Mariners</option>
+            <option value="marlins">Marlins</option>
+            <option value="mets">Mets</option>
+            <option value="nationals">Nationals</option>
+            <option value="orioles">Orioles</option>
+            <option value="padres">Padres</option>
+            <option value="phillies">Phillies</option>
+            <option value="pirates">Pirates</option>
+            <option value="rangers">Rangers</option>
+            <option value="rays">Rays</option>
+            <option value="reds">Reds</option>
+            <option value="redsox">Red Sox</option>
+            <option value="rockies">Rockies</option>
+            <option value="royals">Royals</option>
+            <option value="tigers">Tigers</option>
+            <option value="twins">Twins</option>
+            <option value="whitesox">White Sox</option>
+            <option value="yankees">Yankees</option>
+          </select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class=panel-title">Team Info</h3>
+          </div>
+          <div id="placeHolder" class="panel-body">
+            <!-- <p>TEST</p>  -->       
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<select>
 
-<option selected="selected"></option>
-
-<!--  <option value="hurr">Yankees</option> -->
-  <option>Yankees</option>
-  <option>Rays</option>
-  <option value="saab">Red Sox</option>
-  <option value="opel">Blue Jays</option>
-  <option value="audi">Orioles</option>
-</select>
-
-<hr>
-
-<div class="well">
-     <h5>Select Team:</h5>
-     <select id="selTeam" onchange="optionChanged(this.value)">
-         <option></option>
-         <option value="yankees">Yankees</option> <!–– Pattern for others, alphabetize later ––>
-         <option>Rays</option>
-         <option value="saab">Red Sox</option>
-         <option value="opel">Blue Jays</option>
-         <option value="audi">Orioles</option>
-     </select>
-</div>
+<!--     <footer style="text-align: center"><hr><br><h2>Data from the Rob Dunn Lab. <a href="http://robdunnlab.com/projects/belly-button-biodiversity/" target="_blank" >More info here.</a><br></h2></footer> -->
+  <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="{{ url_for('static', filename='js/bonus.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 
 </body>
 
