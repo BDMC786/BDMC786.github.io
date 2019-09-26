@@ -32,3 +32,20 @@ var twilight = ["It is quite possible", "It has been decided in your favor", "Yo
 
 
 var output = options[Math.floor(Math.random()*choice.length)]; 
+
+
+HERE
+
+console.log("Start Here");
+
+
+
+var submit = d3.select("#submit");
+
+submit.on("click", function() {
+d3.event.preventDefault();
+var selectElement = d3.select("#Ball");
+var gameType = selectElement.property("value");
+console.log(gameType); //good to here, set up logic for gameplay!!
+}
+);
