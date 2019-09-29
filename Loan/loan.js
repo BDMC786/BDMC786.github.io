@@ -4,7 +4,7 @@ var submit = d3.select("#submit");
 //console.log(submit);
 
 submit.on("click", function(){
-  //d3.event.preventDefault();
+  d3.event.preventDefault();
   //console.log("Click");
 
 //capture inputs
