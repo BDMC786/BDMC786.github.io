@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Weather Analysis</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+
+<script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+  
+</head>
+
+<body >
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <!-- emply col to move over text -->
+              <div class="col-md-1"></div>
+              <div class="col-md-1"></div>
+              <div class="col-md-1"></div>
+              <a class="navbar-brand" href="weather_index.html" style="color: white; background-color: teal;">
+                <span class="nav-color"><strong>Latitude</strong></span>
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="clouds.html">Cloud Coverage</a></li>
+                <li><a href="humidity.html">Humidity</a></li>
+                <li><a href="temperature.html">Temperature</a></li>
+                <li><a href="wind.html">Wind Speed</a></li>
+              </ul>
+            </li>
+            <li><a href="comparison.html">Comparisons</a></li>
+            <li><a href="data.html">Data</a></li>
+            
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+<!-- $$$ -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-7">
+      
+                  <div class="panel panel-default">
+                      <div class="panel-body"  >
+                        <h2 ><strong>Summary: Latitude vs. X</strong></h2> 
+                        <hr>
+                        <img class = "img-responsive" src="temp.png" style="width:40%; float: left; margin: 5px;" alt="first image" >
+      
+                        <p>This analysis looks at the ways in which the weather changes with proximity to the equator. Weather data for over 500 cities was 
+                          analyzed for temperature (pictured left), cloudiness, wind speed, and humidity. These results were plotted to determine if any of these 
+                          aspects of weather are influenced by latitude. 
+                          <br>
+                          <br>
+                          Available on this site is an analysis of the findings for each of these factors, including a plot of the data, as well
+                          as a page containing all of the plots together for comparison purposes. Also included is the raw data table obtained 
+                          for each city included.
+                          <br>
+                          <br>
+                          Data was obtained by generating a random set of latitude and longitude coordinates using the random library in Python, 
+                          then using the cities library to generate a list of cities based on these coordinates. Weather data was obtained by 
+                          searching these cities from OpenWeatherMapAPI. Results were plotted using MatPlotLib.
+      
+      
+                        </p>
+                      </div>
+                    </div>
+      
+              </div>
+              <div class="col-md-3">
+                  <!-- $$$$ -->
+      
+                  <div class="panel panel-default">
+                      <div class="panel-body">
+                          
+                        <h2><strong>Visualizations</strong></h2>
+                        <hr>
+                        <div class="row" style = "padding-bottom: 10px">
+                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="temperature.html"><img class = "img img-responsive" src="temp.png" style="width:100%" alt=""></a></div>
+                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="clouds.html"><img class = "img img-responsive" src="cloud.png" style="width:100%" alt=""></a></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="humidity.html"><img class = "img img-responsive" src="humidity.png" style="width:100%" alt=""></a></div>
+                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="wind.html"><img class = "img img-responsive" src="wind.png" style="width:100%" alt=""></a></div>
+                        </div>
+                    
+                    </div>
+      
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+      
+          </div>
+        </div>
+<footer><p><i class="glyphicon glyphicon-copyright-mark"> Copyright Coding Bootcamp 2019</i></p></footer>
+</body>
+</html>
