@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Weather</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        
+        <style>
+            div.citation {
+                text-align: center;
+                color: red;
+            }
+            hr.endSection {
+            border: 3px solid red;
+            border-radius: 5px;
+            }
+            hr.hourSeparator {
+            border: 2px solid black;
+            border-radius: 3px;
+            }
+        </style>
+    </head>
+
+    <body style="background-color:lightblue;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="citation"><a id="Top" href="https://darksky.net/poweredby/" target="_blank"><h1><strong>Powered by DarkSky</strong></h1></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <form method="POST">
+                        <div class="form-group">
+                            <h1>Weather Forecast</h1>
+                            <input class="form-control" id="input" name="text" placeholder="Enter City and State">
+                        </div>
+                        <input type="submit" id="button" type="text" value="Get Weather">
+                    </form>
+                    <br>
+                    <button id="button_GPS">My Location</button>
+                    <script>
+                        // var x = document.getElementById("demo");
+                        document.getElementById("button_GPS").onclick = function() {getLocation()};
+
+                        function getLocation() {
+                          if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(showPosition);
+                          } 
+                        }
+                        
+                        function showPosition(position) {
+                            document.getElementById("input").value = position.coords.latitude + ", "
+                           + position.coords.longitude;
+                           document.getElementById("button").click;
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                        <h2>Some popular locations:</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>
+                        <a href="/bayonne">Bayonne, NJ</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>
+                        <a href="/montclair">Montclair, NJ</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>
+                        <a href="/new_york">New York, NY</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>
+                        <a href="/culver_IN">Culver, IN</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>
+                        <a href="/hightstown">Hightstown, NJ</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>
+                        <a href="/easton">Easton, PA</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>
+                        <a href="/atlanta">Atlanta, GA</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>
+                        <a href="/disney">Disney's Contemporary Resort</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>
+                        <a href="/cranston">Cranston, RI</a>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
